@@ -1,6 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    reactStrictMode: true
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'my-strapi-store-production.up.railway.app',
+        port: '',
+        pathname: '/uploads/**',
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;
